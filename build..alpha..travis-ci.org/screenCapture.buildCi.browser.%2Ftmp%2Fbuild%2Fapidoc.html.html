@@ -1,0 +1,1044 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>factory-girl (v4.2.2)</a>
+</h1>
+<h4>A factory library for Node.js and JavaScript inspired by factory_girl</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.factory-girl">module factory-girl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.BookshelfAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>BookshelfAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.DefaultAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>DefaultAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.MongooseAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>MongooseAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.ObjectAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>ObjectAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.ReduxORMAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>ReduxORMAdapter
+            <span class="apidocSignatureSpan">(session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.SequelizeAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.</span>SequelizeAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.</span>browser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.</span>factory</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.factory-girl.browser">module factory-girl.browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.BookshelfAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>BookshelfAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.DefaultAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>DefaultAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.MongooseAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>MongooseAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.ObjectAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>ObjectAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.ReduxORMAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>ReduxORMAdapter
+            <span class="apidocSignatureSpan">(session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.browser.SequelizeAdapter">
+            function <span class="apidocSignatureSpan">factory-girl.browser.</span>SequelizeAdapter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.browser.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.browser.</span>factory</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.factory-girl.factory">module factory-girl.factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.FactoryGirl">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>FactoryGirl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assoc">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assoc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assocAttrs">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocAttrs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assocAttrsMany">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocAttrsMany
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assocBuild">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocBuild
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assocBuildMany">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocBuildMany
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.assocMany">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocMany
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.chance">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>chance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.oneOf">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>oneOf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.resetSeq">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>resetSeq
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.resetSequence">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>resetSequence
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.seq">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>seq
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.factory-girl.factory.sequence">
+            function <span class="apidocSignatureSpan">factory-girl.factory.</span>sequence
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.factory.</span>adapters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.factory.</span>created</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.factory.</span>defaultAdapter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.factory.</span>factories</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">factory-girl.factory.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.factory-girl" id="apidoc.module.factory-girl">module factory-girl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.BookshelfAdapter" id="apidoc.element.factory-girl.BookshelfAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>BookshelfAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BookshelfAdapter() {
+  _classCallCheck(this, BookshelfAdapter);
+
+  return _possibleConstructorReturn(this, _Object$getPrototypeOf(BookshelfAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.DefaultAdapter" id="apidoc.element.factory-girl.DefaultAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>DefaultAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DefaultAdapter() {
+  _classCallCheck(this, DefaultAdapter);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.MongooseAdapter" id="apidoc.element.factory-girl.MongooseAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>MongooseAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MongooseAdapter() {
+  _classCallCheck(this, MongooseAdapter);
+
+  return _possibleConstructorReturn(this, _Object$getPrototypeOf(MongooseAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Adapters
+
+Adapters provide support for different databases and ORMs. Adapters can be registered for
+specific models, or as the 'default adapter', which is used for any models for which an
+adapter has not been specified. See the adapter docs for usage, but typical usage is:
+
+```javascript
+const adapter = new factory.<span class="apidocCodeKeywordSpan">MongooseAdapter</span>();
+
+// use the mongoose adapter as the default adapter
+factory.setAdapter(adapter);
+
+// Or use it only for one model-factory
+factory.setAdapter(adapter, 'factory-name');
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.ObjectAdapter" id="apidoc.element.factory-girl.ObjectAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>ObjectAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectAdapter() {
+  _classCallCheck(this, ObjectAdapter);
+
+  return _possibleConstructorReturn(this, _Object$getPrototypeOf(ObjectAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ObjectAdapter
+
+`ObjectAdapter` is a simple adapter that uses `const model = new MyModel()`,
+`model.save()` and `model.destroy()`.
+
+```js
+factory.setAdapter(new factory.<span class="apidocCodeKeywordSpan">ObjectAdapter</span>());
+class MyModel {
+save() {
+  // save the model
+},
+destroy() {
+  // destroy the model
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.ReduxORMAdapter" id="apidoc.element.factory-girl.ReduxORMAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>ReduxORMAdapter
+        <span class="apidocSignatureSpan">(session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ReduxORMAdapter(session) {
+  _classCallCheck(this, ReduxORMAdapter);
+
+  var _this = _possibleConstructorReturn(this, _Object$getPrototypeOf(ReduxORMAdapter).call(this));
+
+  _this.session = session;
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.SequelizeAdapter" id="apidoc.element.factory-girl.SequelizeAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.</span>SequelizeAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SequelizeAdapter() {
+  _classCallCheck(this, SequelizeAdapter);
+
+  return _possibleConstructorReturn(this, _Object$getPrototypeOf(SequelizeAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.factory-girl.browser" id="apidoc.module.factory-girl.browser">module factory-girl.browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.BookshelfAdapter" id="apidoc.element.factory-girl.browser.BookshelfAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>BookshelfAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BookshelfAdapter() {
+  (0, _classCallCheck3.default)(this, BookshelfAdapter);
+  return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(BookshelfAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.DefaultAdapter" id="apidoc.element.factory-girl.browser.DefaultAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>DefaultAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DefaultAdapter() {
+  (0, _classCallCheck3.default)(this, DefaultAdapter);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.MongooseAdapter" id="apidoc.element.factory-girl.browser.MongooseAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>MongooseAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MongooseAdapter() {
+  (0, _classCallCheck3.default)(this, MongooseAdapter);
+  return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(MongooseAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Adapters
+
+Adapters provide support for different databases and ORMs. Adapters can be registered for
+specific models, or as the 'default adapter', which is used for any models for which an
+adapter has not been specified. See the adapter docs for usage, but typical usage is:
+
+```javascript
+const adapter = new factory.<span class="apidocCodeKeywordSpan">MongooseAdapter</span>();
+
+// use the mongoose adapter as the default adapter
+factory.setAdapter(adapter);
+
+// Or use it only for one model-factory
+factory.setAdapter(adapter, 'factory-name');
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.ObjectAdapter" id="apidoc.element.factory-girl.browser.ObjectAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>ObjectAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectAdapter() {
+  (0, _classCallCheck3.default)(this, ObjectAdapter);
+  return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(ObjectAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ObjectAdapter
+
+`ObjectAdapter` is a simple adapter that uses `const model = new MyModel()`,
+`model.save()` and `model.destroy()`.
+
+```js
+factory.setAdapter(new factory.<span class="apidocCodeKeywordSpan">ObjectAdapter</span>());
+class MyModel {
+save() {
+  // save the model
+},
+destroy() {
+  // destroy the model
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.ReduxORMAdapter" id="apidoc.element.factory-girl.browser.ReduxORMAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>ReduxORMAdapter
+        <span class="apidocSignatureSpan">(session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ReduxORMAdapter(session) {
+  (0, _classCallCheck3.default)(this, ReduxORMAdapter);
+
+  var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(ReduxORMAdapter).call(this));
+
+  _this.session = session;
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.browser.SequelizeAdapter" id="apidoc.element.factory-girl.browser.SequelizeAdapter">
+        function <span class="apidocSignatureSpan">factory-girl.browser.</span>SequelizeAdapter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SequelizeAdapter() {
+  (0, _classCallCheck3.default)(this, SequelizeAdapter);
+  return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(SequelizeAdapter).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.factory-girl.factory" id="apidoc.module.factory-girl.factory">module factory-girl.factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.FactoryGirl" id="apidoc.element.factory-girl.factory.FactoryGirl">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>FactoryGirl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FactoryGirl() {
+  var _this = this;
+
+  var options = arguments.length &lt;= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  _classCallCheck(this, FactoryGirl);
+
+  this.factories = {};
+  this.options = {};
+  this.adapters = {};
+  this.created = new _Set();
+
+  this.assoc = generatorThunk(this, Assoc);
+  this.assocMany = generatorThunk(this, AssocMany);
+  this.assocBuild = deprecate('assocBuild', 'assocAttrs');
+  this.assocBuildMany = deprecate('assocBuildMany', 'assocAttrsMany');
+  this.assocAttrs = generatorThunk(this, AssocAttrs);
+  this.assocAttrsMany = generatorThunk(this, AssocAttrsMany);
+  this.seq = this.sequence = function () {
+    return generatorThunk(_this, Sequence).apply(undefined, arguments);
+  };
+  this.resetSeq = this.resetSequence = function (id) {
+    Sequence.reset(id);
+  };
+  this.chance = generatorThunk(this, ChanceGenerator);
+  this.oneOf = generatorThunk(this, OneOf);
+
+  this.defaultAdapter = new DefaultAdapter();
+  this.options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## Creating new Factories
+
+You can create multiple factories which have different settings:
+
+```javascript
+let anotherFactory = new factory.<span class="apidocCodeKeywordSpan">FactoryGirl</span>();
+anotherFactory.setAdapter(new MongooseAdapter()); // use the Mongoose adapter
+```
+
+## History
+
+This module started out as a fork of
+[factory-lady](https://github.com/petejkim/factory-lady), but the fork deviated quite a
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assoc" id="apidoc.element.factory-girl.factory.assoc">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assoc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assoc = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// seq is an alias for sequence
+email: factory.seq('User.email', (n) =&gt; `user${n}@ymail.com`),
+
+// use the chance(http://chancejs.com/) library to generate real-life like data
+about: factory.chance('sentence'),
+
+// use assoc to associate with other models
+profileImage: factory.<span class="apidocCodeKeywordSpan">assoc</span>('profile_image', '_id'),
+
+// or assocMany to associate multiple models
+addresses: factory.assocMany('address', 2, '_id'),
+
+// use assocAttrs to embed models that are not persisted
+creditCardNumber: factory.assocAttrs('credit_card', 'number', {type: 'masterCard'}),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assocAttrs" id="apidoc.element.factory-girl.factory.assocAttrs">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocAttrs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assocAttrs = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // use assoc to associate with other models
+  profileImage: factory.assoc('profile_image', '_id'),
+
+  // or assocMany to associate multiple models
+  addresses: factory.assocMany('address', 2, '_id'),
+
+  // use assocAttrs to embed models that are not persisted
+  creditCardNumber: factory.<span class="apidocCodeKeywordSpan">assocAttrs</span>('credit_card', 'number', {
+type: 'masterCard'}),
+
+  // use assocAttrs or assocAttrsMany to embed plain json objects
+  twitterDetails: factory.assocAttrs('twitter_details'),
+});
+```
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assocAttrsMany" id="apidoc.element.factory-girl.factory.assocAttrsMany">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocAttrsMany
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assocAttrsMany = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assocBuild" id="apidoc.element.factory-girl.factory.assocBuild">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocBuild
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assocBuild = function () {
+  throw new Error('The ' + method + ' method has been deprecated, use ' + see + ' instead');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assocBuildMany" id="apidoc.element.factory-girl.factory.assocBuildMany">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocBuildMany
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assocBuildMany = function () {
+  throw new Error('The ' + method + ' method has been deprecated, use ' + see + ' instead');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.assocMany" id="apidoc.element.factory-girl.factory.assocMany">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>assocMany
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assocMany = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // use the chance(http://chancejs.com/) library to generate real-life like data
+  about: factory.chance('sentence'),
+
+  // use assoc to associate with other models
+  profileImage: factory.assoc('profile_image', '_id'),
+
+  // or assocMany to associate multiple models
+  addresses: factory.<span class="apidocCodeKeywordSpan">assocMany</span>('address', 2, '_id'),
+
+  // use assocAttrs to embed models that are not persisted
+  creditCardNumber: factory.assocAttrs('credit_card', 'number', {type: 'masterCard'}),
+
+  // use assocAttrs or assocAttrsMany to embed plain json objects
+  twitterDetails: factory.assocAttrs('twitter_details'),
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.chance" id="apidoc.element.factory-girl.factory.chance">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>chance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chance = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+asyncData: () =&gt; fetch('some/resource'),
+});
+factory.define('user', User, {
+// seq is an alias for sequence
+email: factory.seq('User.email', (n) =&gt; `user${n}@ymail.com`),
+
+// use the chance(http://chancejs.com/) library to generate real-life like data
+about: factory.<span class="apidocCodeKeywordSpan">chance</span>('sentence'),
+
+// use assoc to associate with other models
+profileImage: factory.assoc('profile_image', '_id'),
+
+// or assocMany to associate multiple models
+addresses: factory.assocMany('address', 2, '_id'),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.oneOf" id="apidoc.element.factory-girl.factory.oneOf">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>oneOf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneOf = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function () {
+    return generator.generate.apply(generator, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.resetSeq" id="apidoc.element.factory-girl.factory.resetSeq">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>resetSeq
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetSeq = function (id) {
+  Sequence.reset(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      var adapter = _ref7[0];
+      var model = _ref7[1];
+      return prev.then(function () {
+        return adapter.destroy(model, model.constructor);
+      });
+    }, _Promise.resolve());
+    this.created.clear();
+    this.<span class="apidocCodeKeywordSpan">resetSeq</span>();
+    return promise;
+  }
+}, {
+  key: 'setAdapter',
+  value: function setAdapter(adapter) {
+    var _this6 = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.resetSequence" id="apidoc.element.factory-girl.factory.resetSequence">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>resetSequence
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetSequence = function (id) {
+  Sequence.reset(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.seq" id="apidoc.element.factory-girl.factory.seq">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>seq
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seq = function () {
+  return generatorThunk(_this, Sequence).apply(undefined, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// use functions to compute some complex value
+launchDate: () =&gt; new Date(),
+// return a promise to populate data asynchronously
+asyncData: () =&gt; fetch('some/resource'),
+});
+factory.define('user', User, {
+// seq is an alias for sequence
+email: factory.<span class="apidocCodeKeywordSpan">seq</span>('User.email', (n) =&gt; `user${n}@ymail.com`),
+
+// use the chance(http://chancejs.com/) library to generate real-life like data
+about: factory.chance('sentence'),
+
+// use assoc to associate with other models
+profileImage: factory.assoc('profile_image', '_id'),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.factory-girl.factory.sequence" id="apidoc.element.factory-girl.factory.sequence">
+        function <span class="apidocSignatureSpan">factory-girl.factory.</span>sequence
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sequence = function () {
+  return generatorThunk(_this, Sequence).apply(undefined, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+For example:
+
+```javascript
+// Using objects as initializer
+factory.define('product', Product, {
+// use sequences to generate values sequentially
+id: factory.<span class="apidocCodeKeywordSpan">sequence</span>('Product.id', (n) =&gt; `product_${n}`),
+// use functions to compute some complex value
+launchDate: () =&gt; new Date(),
+// return a promise to populate data asynchronously
+asyncData: () =&gt; fetch('some/resource'),
+});
+factory.define('user', User, {
+// seq is an alias for sequence
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
